@@ -102,6 +102,12 @@ body {
 	outline: none;
 	cursor: pointer;
 	margin-top: calc(var(--index) * 2.5);
+	transition: 1s ease;
+}
+.button-start:hover,
+.button-start:focus {
+	border-color: #87da26;
+	color: #d8ff00;
 }
 .layer-4, .layer-5, .layer-6 {
 	pointer-events: none;
