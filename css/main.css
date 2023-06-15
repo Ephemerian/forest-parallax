@@ -30,6 +30,7 @@ body {
 	left: calc(51% - calc(var(--logo-size) / 2));
 	top: calc(var(--index) * 2.8);
 	z-index: 1;
+	animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
 .layers {
 	perspective: 1000px;
@@ -77,6 +78,20 @@ body {
 	letter-spacing: calc(var(--index) * -.15);
 	line-height: 1.35em;
 	margin-top: calc(var(--index) * 5.5);
+	animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+@keyframes text-focus-in {
+	0% {
+		-webkit-filter: blur(12px);
+		filter: blur(12px);
+		opacity: 0;
+	}
+
+	100% {
+		-webkit-filter: blur(0px);
+		filter: blur(0px);
+		opacity: 1;
+	}
 }
 .hero-content span {
 	display: block;
